@@ -8,7 +8,7 @@ $|end of string or line|finish$|finish|finnish|
 \Z|end of string, or char before last new line in any match mode|finish\Z|finish|finnish|
 \z|end of string, in any match mode.|
 \G|end of the previous match or the start of the string for the first match|\^(get\|set)\|\G\w+$|setValue|seValue
-\b|word boundary; position between a word character (\w), and a nonword character (\W)|\bis\b|This island is beautiful|This island isn't beautiful
+\b|[^A-Za-z0-9_]|word boundary; position between a word character (\w), and a nonword character (\W)|\bis\b|This island is beautiful|This island isn't beautiful
 \B|not-word-boundary.|\Bland|island|peninsula
 
 |Assertion|Description|Example|Valid match|Invalid|
