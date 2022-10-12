@@ -37,6 +37,7 @@ $|end of string or line|finish$|finish|finnish|
 :---|:---
 \\|general escape|
 \n|new line|
+\1|BackReference|
 \r|carriage return|
 \t|tab|
 \v|vertical tab|
