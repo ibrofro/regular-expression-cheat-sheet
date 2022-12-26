@@ -74,7 +74,7 @@ $|end of string or line|finish$|finish|finnish|
 :---|:---
 g| global match
 i| case-insensitiv, match both uppercase and lowercase
-m| multiple lines
+m| multiple lines In multi-line mode, the ^ and $ anchors match the beginning and end of each line in the input string, rather than the beginning and end of the entire string. This can be useful when working with text that contains multiple lines, such as a block of code or a document.
 s| single line (by default)
 x| ingore whitespace allows comments
 A| anchored, the pattern is forced to ^
@@ -83,4 +83,4 @@ S| extra analysis performed, useful for non-anchored patterns
 U| ungreedy, greedy patterns becomes lazy by default
 X| additional functionality of PCRE (PCRE extra)
 J| allow duplicate names for subpatterns
-u| unicode, pattern and subject strings are treated as UTF-8
+u| unicode, pattern and subject strings are treated as UTF-8 The \u flag in a regular expression is used to enable Unicode support in the pattern. When the \u flag is present, the regular expression engine will treat the pattern as a Unicode pattern and will attempt to match Unicode characters in the input string.
