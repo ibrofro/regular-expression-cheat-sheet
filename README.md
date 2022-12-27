@@ -13,10 +13,10 @@ $|end of string or line|finish$|finish|finnish|
 
 |Assertion|Description|Example|Valid match|Invalid|
 :---|:---|:---|:---|---
-(?=...)|positive lookahead|question(?=s)|questions|question
-(?!...)|negative lookahead|answer(?!s)|answer| answers
-(?<=...)|positive look-behind|(?<=appl)e|apple|application
-(?<!...)|negative For example    /(?<!x)y/ will match y in ay and by but it will not match xy. Or we can say it will not match y in xy, other wise it will match every y which doesn't have an x before it.
+(?=...)|positive LOOKAHEAD|question(?=s)|questions|question
+(?!...)|negative LOOKAHEAD|answer(?!s)|answer| answers
+(?<=...)|positive LOOKBEHIND|Suppose you want to match an x which immediately follows y. In other words you want to match an x only and only if there is  y before it. The regex for this will be/(?<=y)x/ | xy| not(x)y
+(?<!...)|negative LOOKBEHIND |/(?<!x)y/ will match y in ay and by but it will not match xy. Or we can say it will not match y in xy, other wise it will match every y which doesn't have an x before it.| not(x)y | xy 
 
 |Char class|Description|Example|Valid match|Invalid|
 :---|:---|:---|:---|---
