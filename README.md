@@ -16,7 +16,7 @@ $|end of string or line|finish$|finish|finnish|
 (?=...)|positive lookahead|question(?=s)|questions|question
 (?!...)|negative lookahead|answer(?!s)|answer| answers
 (?<=...)|positive look-behind|(?<=appl)e|apple|application
-(?<!...)|negative look-behind|(?<!goo)d|mood|good
+(?<!...)|negative For example    /(?<!x)y/ will match y in ay and by but it will not match xy. Or we can say it will not match y in xy, other wise it will match every y which doesn't have an x before it.
 
 |Char class|Description|Example|Valid match|Invalid|
 :---|:---|:---|:---|---
