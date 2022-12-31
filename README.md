@@ -2,8 +2,8 @@
 
 |Anchor|Description|Example|Valid match|Invalid|
 :---|:---|:---|:---|---
-^|start of string or line|^foam|foam|bath foam|
-\A|start of string in any match mode|\Afoam|foam|bath foam|
+^|start of string but in multiline mode it's the start of every line|^foam|foam|bath foam|
+\A|start of string in any match mode (multiline mode m and singleline mode s) |\Afoam|foam|bath foam|
 $|end of string or line|finish$|finish|finnish|
 \Z|end of string, or char before last new line in any match mode|finish\Z|finish|finnish|
 \z|end of string, in any match mode.|
