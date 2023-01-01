@@ -5,8 +5,8 @@
 ^|start of string but in multiline mode it's the start of every line|^foam|foam|bath foam|
 \A|start of string in any match mode (multiline mode m and singleline mode s) |\Afoam|foam|bath foam|
 $|end of string but in multiline mode it's the end of every line|finish$|finish|finnish|
-\Z|end of string, or char before last new line in any match mode|finish\Z|finish|finnish|
-\z|end of string, in any match mode.|
+\Z|end of string in any match mode (multiline mode m and singleline mode s)|finish\Z|finish|finnish|
+\z|we don't know yet! |
 \G|end of the previous match or the start of the string for the first match|\^(get\|set)\|\G\w+$|setValue|seValue
 \b|[^A-Za-z0-9_] word boundary; position between a word character (\w), and a nonword character (\W)|\bis\b|This island is beautiful|This island isn't beautiful
 \B|not-word-boundary.|\Bland|island|peninsula
