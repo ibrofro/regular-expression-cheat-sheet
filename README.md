@@ -15,7 +15,7 @@ $|end of string but in multiline mode it's the end of every line|finish$|finish|
 :---|:---|:---|:---|---
 (?!...)|negative LOOKAHEAD|Suppose you want to match an y that is not followed by x . In other words you want to match an x only and only if there is not y after it. The regex for this will be /x(?!y)/ |xnot(y)| xy
 (?=...)|positive LOOKAHEAD|Suppose you want to match an y followed by x . In other words you want to match an x only and only if there is  y after it. The regex for this will be /x(?=y)/ |xy| xnot(y)
-(?<=...)|positive LOOKBEHIND|Suppose you want to match an x which immediately follows y. In other words you want to match an x only and only if there is  y before it. The regex for this will be/(?<=y)x/ | xy| not(x)y
+(?<=...)|positive LOOKBEHIND|Suppose you want to match an x which immediately follows y. In other words you want to match an x only and only if there is  y before it. The regex for this will be/(?<=y)x/ | yx| not(y)x
 (?<!...)|negative LOOKBEHIND |/(?<!x)y/ will match y in ay and by but it will not match xy. Or we can say it will not match y in xy, other wise it will match every y which doesn't have an x before it.| not(x)y | xy 
 
 |Char class|Description|Example|Valid match|Invalid|
