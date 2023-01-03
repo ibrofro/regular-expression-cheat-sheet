@@ -13,7 +13,7 @@ $|end of string but in multiline mode it's the end of every line|finish$|finish|
 
 |Assertion|Description|Example|Valid match|Invalid|
 :---|:---|:---|:---|---
-(?!...)|negative LOOKAHEAD|Suppose you want to match an y that is not followed by x . In other words you want to match an x only and only if there is not y after it. The regex for this will be /x(?!y)/ |xnot(y)| xy
+(?!...)|negative LOOKAHEAD|Suppose you want to match an x that is not followed by y . In other words you want to match an x only and only if there is not y after it. The regex for this will be /x(?!y)/ |xnot(y)| xy
 (?=...)|positive LOOKAHEAD|Suppose you want to match an y followed by x . In other words you want to match an x only and only if there is  y after it. The regex for this will be /x(?=y)/ |xy| xnot(y)
 (?<=...)|positive LOOKBEHIND|Suppose you want to match an x which immediately follows y. In other words you want to match an x only and only if there is  y before it. The regex for this will be/(?<=y)x/ | yx| not(y)x
 (?<!...)|negative LOOKBEHIND |/(?<!x)y/ will match y in ay and by but it will not match xy. Or we can say it will not match y in xy, other wise it will match every y which doesn't have an x before it.| not(x)y | xy 
@@ -56,6 +56,7 @@ $|end of string but in multiline mode it's the end of every line|finish$|finish|
 :---|:---|:---|:---|---
 \||alternation|apple\|orange|apple, orange|melon
 ( )| subpattern |foot(er\|ball)|footer or football|footpath
+Inline options (?X) or (?-X:Y) or (?X:Y) | where X is the option and Y is the content of the group. Options can be turned on with X, and turned off with -X) |(?i:aB)ker|aBker, abker, or ABker|acker|
 (?P\<*name*>...)|subpattern, and capture submatch into *name*|`(?P<greeting>hello)`|hello|hallo
 (?:...)|subpattern, but does not capture submatch|(?:hello)|hello|hallo
 +| one or more quantifier|ye+ah|yeah, yeeeah|yah  
