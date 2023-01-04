@@ -56,7 +56,7 @@ $|end of string but in multiline mode it's the end of every line|finish$|finish|
 :---|:---|:---|:---|---
 \||alternation|apple\|orange|apple, orange|melon
 ( )| subpattern |foot(er\|ball)|footer or football|footpath
-Inline options (?X) or (?-X:Y) or (?X:Y) | where X is the option and Y is the content of the group. Options can be turned on with X, and turned off with -X) |(?i:aB)ker|aBker, abker, or ABker|acker|
+Inline options (?-X:Y) or (?X:Y) | where X is the option and Y is the content of the group. Options can be turned on with X, and turned off with -X) |(?i:aB)ker|aBker, abker, or ABker|acker|
 (?P\<*name*>...)|subpattern, and capture submatch into *name*|`(?P<greeting>hello)`|hello|hallo
 (?:...)|subpattern, but does not capture submatch|(?:hello)|hello|hallo
 +| one or more quantifier|ye+ah|yeah, yeeeah|yah  
@@ -79,7 +79,7 @@ m| multiple lines In multi-line mode, the ^ and $ anchors match the beginning an
 s| single line (by default)
 x| ingore whitespace allows comments
 A| anchored, the pattern is forced to ^
-D| dollar end only, a dollar metacharacter matches only at the end 
+D| modifies the behavior of the dollar sign ($) metacharacter. Normally, the dollar sign matches the end of a line or string. However, when the "D" modifier is used, the dollar sign will match before a newline at the end of the string
 S| extra analysis performed, useful for non-anchored patterns
 U| ungreedy, greedy patterns becomes lazy by default
 X| additional functionality of PCRE (PCRE extra)
